@@ -49,29 +49,6 @@ The recommended way to install and work with `camdkit` is [`uv`](https://docs.as
   uv run python src/main/python/camdkit/red/cli.py src/test/resources/red/A001_C066_0303LZ_001.static.csv src/test/resources/red/A001_C066_0303LZ_001.frames.csv
   ```
 
-<details>
-<summary><b>Legacy: <code>pipenv</code></b> installation</summary>
-
-- install Python (https://www.python.org/)
-- install pipenv
-  ```bash
-  pip install --user pipenv
-  ```
-- install dependencies
-  ```bash
-  pipenv install --dev
-  ```
-- set the `PYTHONPATH` environment variable to `src/main/python`, e.g.
-  ```bash
-  export PYTHONPATH=src/main/python
-  ```
-- convert RED camera files
-  ```bash
-  pipenv run python src/main/python/camdkit/red/cli.py src/test/resources/red/A001_C066_0303LZ_001.static.csv src/test/resources/red/A001_C066_0303LZ_001.frames.csv
-  ```
-
-</details>
-
 ## `Clip`, the foundational `camdkit` object
 The fundamental organizing tool for `camdkit` parameters is the `Clip` object. It holds parameter values, validates any new parameter values to be added or to replace existing values, and handles JSON serialization and deserialization.
 
